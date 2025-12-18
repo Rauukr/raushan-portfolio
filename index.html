@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raushan Kumar | Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Raushan</div>
+
+       <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li>
+        <a href="assets/Raushan.pdf" 
+           class="resume-btn" 
+           download>
+           Resume
+        </a>
+    </li>
+</ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+</header>
+<section id="home" class="hero hidden">
+    <div class="home-content">
+        <div class="home-text">
+            <h1>Hello, I'm <span>Raushan Kumar</span></h1>
+            <h2>I am a <span id="typing"></span></h2>
+            <button onclick="scrollToContact()">Hire Me</button>
+        </div>
+
+        <div class="home-image">
+            <img src="assets/Profilee.jpeg" alt="Raushan Kumar">
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about hidden">
+    <div class="about-container">
+        <div class="about-img">
+            <img src="assets/Profilee.jpeg" alt="About Me">
+        </div>
+
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+                Targeting Java Full Stack Developer roles with an organization of high repute with a scope of improving knowledge 
+and further career growth.  
+ Java Full stack (JDBC, JSP , Servlet, Spring boot, React , JavaScript) with a strong background in building scalable web 
+applications  
+Demonstrated ability to manage and deliver projects efficiently, from initial planning and design to final deployment 
+and maintenance.  
+Committed to staying updated with the latest industry trends and technologies, continuously enhancing skills to 
+provide innovative solutions 
+                <!-- I am a Computer Science Engineering student and a
+                Java Full Stack Developer skilled in Java, Spring Boot,
+                HTML, CSS, JavaScript, and MySql database technologies. -->
+            </p>
+
+            <ul>
+                <li>✔ Java & Spring Boot</li>
+                <li>✔ Frontend Development</li>
+                <li>✔ Database & Backend</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section id="projects" class="hidden">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+        <div class="project-card">
+            <img src="assets/hotel.png" alt="Hotel Management">
+            <h3>Hotel Management System For Backend Project</h3>
+            <p>Java, JDBC, Servlet</p>
+        </div>
+
+        <div class="project-card">
+            <img src="assets/moview.png" alt="Movie Review">
+            <h3>Movie Review Web App For Backend And Frontend Project</h3>
+            <p>HTML, CSS, JavaScript, Java, SpringBoot, MySql</p>
+        </div>
+
+        <div class="project-card">
+            <img src="assets/DrumKit.png" alt="DrumKit">
+            <h3>Drum Kit for Front-End Project</h3>
+            <p>HTML, CSS, JavaScript</p>
+        </div>
+    </div>
+</section>
+<section id="certificates" class="certificates hidden">
+    <h2>Certificates</h2>
+
+    <div class="cert-grid">
+        <div class="cert-card">
+            <img src="assets/DSA.png" alt="Certificate 1" onclick="openCert(this.src)">
+            <h3>Data Structures and Algorithms</h3>
+            <a href="assets/DSA.png" download class="cert-btn">Download</a>
+        </div>
+
+        <div class="cert-card">
+            <img src="assets/ICICT.jpg" alt="Certificate 2" onclick="openCert(this.src)">
+            <h3>International Conference Convocation On Innovation & Technology(ICICT-2025)</h3>
+            <a href="assets/ICICT.jpg" download class="cert-btn">Download</a>
+        </div>
+
+        <div class="cert-card">
+            <img src="assets/nptl.jpg" alt="Certificate 3" onclick="openCert(this.src)">
+            <h3>Introduction To Internet Of Things</h3>
+            <a href="assets/nptl.jpg" download class="cert-btn">Download</a>
+        </div>
+    </div>
+</section>
+
+<!-- Certificate Modal -->
+<div id="certModal" class="cert-modal">
+    <span class="close-btn" onclick="closeCert()">&times;</span>
+    <img id="certModalImg">
+</div>
+
+<section id="contact" class="hidden">
+    <h2>Contact Me</h2>
+    <form
+  action="https://formspree.io/f/xbdrrpga"
+  method="POST"
+>
+    <!-- <form action="https://formspree.io/f/xayrdazl" method="POST" onsubmit="return validateForm()"> -->
+        <input type="text" name="Name" id="name" placeholder="Your Name" required>
+        <input type="email" name="Email" id="email" placeholder="Your Email" required>
+        <textarea id="message" name="Message" placeholder="Your Message" required></textarea><br>
+        <button type="submit">Send</button>
+       <!-- // <p id="formMsg"></p> -->
+    <!-- </form> -->
+</form>
+</section>
+<footer>
+    <p>© 2025 Raushan Kumar</p>
+    <div class="footer-links">
+        <a href="https://github.com/raushankumar" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/raushankumar" target="_blank">LinkedIn</a>
+        <a href="mailto:rk7133615@gmail.com">Email</a>
+    </div>
+</footer>
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
